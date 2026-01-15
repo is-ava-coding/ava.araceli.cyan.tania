@@ -2,16 +2,76 @@
 
 <html>
 <title>MySpace.com</title>
+  <style>
+/* ===== RESET ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ===== STATIC BACKGROUND ===== */
+body {
+    background-color: #000;
+    height: 100vh;
+    overflow: hidden; /* prevents body scrolling */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ===== CENTERING WRAPPER ===== */
+.page-wrapper {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ===== FLOATING PAGE ===== */
+.homepage {
+    width: 80%;
+    max-width: 900px;
+    height: 80vh;
+    background-color: #b3b3b3;
+    color: #111;
+    padding: 30px;
+    overflow-y: auto; /* allows scrolling inside */
+    box-shadow: 0 0 40px rgba(255,255,255,0.08);
+    border-radius: 4px;
+}
+
+/* ===== DEMO CONTENT ===== */
+.homepage h1 {
+    margin-bottom: 20px;
+}
+
+.homepage p {
+    margin-bottom: 16px;
+    line-height: 1.6;
+}
+</style>
 <head>
 
 </head>
 
 <body>
 
-<h1>Hello Cold World</h1>
+<div class="page-wrapper">
+    <div class="homepage">
+        <h1>Hello Cold World</h1>
 
-<p>Ava, Araceli, Cyan, and Tania were here >:3c</p>
+        <p>
+            Ava, Araceli, Cyan, and Tania were here >:3c
+        </p>
 
+        <!-- FILLER CONTENT FOR SCROLLING -->
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+        <!-- DUPLICATE TO ENSURE SCROLL -->
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      
+    </div>
+</div>
 </body>
 
 </html>
