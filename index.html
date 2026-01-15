@@ -7,56 +7,53 @@
     <title>MySpace.com</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
     <style>
-    /* ===== RESET ===== */
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-    }
+        /* ===== RESET ===== */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-    /* ===== BLACK GIF BACKGROUND ===== */
-    body {
-        background-color: black;
-        background-image: url("sparkles.gif");
-        background-repeat: repeat;
-        background-position: center;
-        background-attachment: fixed;
-        height: 100vh;
-        overflow: hidden;
-        font-family: 'Orbitron', sans-serif;
-    }
+        /* ===== BLACK GIF BACKGROUND ===== */
+        body {
+            background-color: black;
+            background-image: url("sparkles.gif");
+            background-repeat: repeat;
+            background-position: center;
+            background-attachment: fixed;
+            height: 100vh;
+            overflow: hidden;
+            font-family: 'Orbitron', sans-serif;
+        }
 
-    /* ===== CENTERING WRAPPER ===== */
-    .page-wrapper {
-        position: fixed;
-        inset: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+        /* ===== CENTERING WRAPPER ===== */
+        .page-wrapper {
+            position: fixed;
+            inset: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-    /* ===== FLOATING PAGE ===== */
-    .homepage {
-        width: 80%;
-        max-width: 900px;
-        height: 80vh;
-        background-color: #111;
-        color: #59CBE8;
-        padding: 30px;
-        overflow-y: auto;
-        border-radius: 5px;
+        /* ===== FLOATING PAGE ===== */
+        .homepage {
+            width: 80%;
+            max-width: 900px;
+            height: 80vh;
+            background-color: #111;
+            color: #59CBE8;
+            padding: 30px;
+            overflow-y: auto;
+            border-radius: 5px;
+            border: 2px solid #59CBE8;
+            box-shadow:
+                0 0 10px rgba(0, 255, 255, 0.6),
+                0 0 25px rgba(0, 255, 255, 0.4),
+                0 0 50px rgba(0, 255, 255, 0.25);
+            text-align: center;
+        }
 
-        /* CYAN BORDER */
-        border: 2px solid #59CBE8;
-
-        /* CYAN GLOW */
-        box-shadow:
-            0 0 10px rgba(0, 255, 255, 0.6),
-            0 0 25px rgba(0, 255, 255, 0.4),
-            0 0 50px rgba(0, 255, 255, 0.25);
-    }
-
-    /* ===== CONTENT ===== */
+        /* ===== AVATAR ===== */
         .avatar {
             width: 150px;
             height: 150px;
@@ -72,19 +69,23 @@
             height: 100%;
             object-fit: cover;
         }
-    .homepage h1 {
-        margin-bottom: 20px;
-        text-align: center;
-        align-items: center;
-    }
 
-    .homepage p {
-        margin-bottom: 16px;
-        line-height: 1.6;
-        text-align: center;
-        align-items: center;
-    }
-    /* ===== MP3 PLAYER ===== */
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 16px;
+            line-height: 1.6;
+        }
+
+        /* ===== MP3 PLAYER ===== */
+        audio {
+            margin-top: 20px;
+            width: 80%;
+            max-width: 400px;
+        }
+
         button {
             font-family: 'Orbitron', sans-serif;
             padding: 15px 30px;
@@ -92,7 +93,7 @@
             background-color: #00ffea;
             border: none;
             cursor: pointer;
-            margin-top: 30px;
+            margin-top: 20px;
             color: #0d0d0d;
             border-radius: 8px;
         }
@@ -105,28 +106,33 @@
 
 <body>
 
-<div class="page-wrapper">
-    <div class="homepage">
+    <div class="page-wrapper">
+        <div class="homepage">
+            <!-- Avatar -->
             <div class="avatar">
-        <img src="angel.jpg" alt="Avatar">
-        <h1>Hello Cold World</h1>
+                <img src="angel.jpg" alt="Avatar">
+            </div>
 
-        <p>
-            Ava, Araceli, Cyan, and Tania were here >:3c
-        </p>
-        <br>
-        <p>This website was created for IS270.</p>
-        <p>Does it remind you of myspace? :P</p>
-        <p>Audio is set to autoplay, plz unblock in search bar if no sound! >.<</p>
+            <h1>Hello Cold World</h1>
+
+            <p>
+                Ava, Araceli, Cyan, and Tania were here >:3c
+            </p>
+            <p>This website was created for IS270.</p>
+            <p>Does it remind you of MySpace? :P</p>
+            <p>Audio is set to autoplay, plz unblock in search bar if no sound! >.<</p>
+
+            <!-- Audio player -->
+            <audio id="music" controls autoplay loop>
+                <source src="hellocoldworld.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+
+            <!-- Play/Pause Button -->
+            <br>
+            <button id="playButton">Play Music</button>
+        </div>
     </div>
-</div>
-    <audio controls autoplay loop>
-        <source src="hellocoldworld.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
-    <br>
-    <!-- Custom play/pause button -->
-    <button id="playButton">Play Music</button>
 
     <script>
         const music = document.getElementById('music');
@@ -141,5 +147,7 @@
                 playButton.textContent = "Play Music";
             }
         });
+    </script>
+
 </body>
 </html>
