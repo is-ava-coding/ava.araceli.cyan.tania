@@ -97,7 +97,7 @@
         <p>
             Ava, Araceli, Cyan, and Tania were here >:3c
         </p>
-        <break></break>
+        <br>
         <p>This website was created for IS270.</p>
         <p>Does it remind you of myspace? :P</p>
         <p>Audio is set to autoplay, plz unblock in search bar if no sound! >.<</p>
@@ -107,5 +107,22 @@
         <source src="hellocoldworld.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
+    <br>
+    <!-- Custom play/pause button -->
+    <button id="playButton">Play Music</button>
+
+    <script>
+        const music = document.getElementById('music');
+        const playButton = document.getElementById('playButton');
+
+        playButton.addEventListener('click', () => {
+            if (music.paused) {
+                music.play().catch(err => console.log("Playback failed:", err));
+                playButton.textContent = "Pause Music";
+            } else {
+                music.pause();
+                playButton.textContent = "Play Music";
+            }
+        });
 </body>
 </html>
