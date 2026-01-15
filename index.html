@@ -1,65 +1,64 @@
 <!DOCTYPE html>
+<html lang="en">
 
-<html>
-<title>MySpace.com</title>
-  <style>
-/* ===== RESET ===== */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-/* ===== BLACK BACKGROUND ===== */
-body {
-    background-color: black;
-    background-image: url("sparkles.gif");
-    background-repeat: repeat;
-    background-position: center;
-    background-attachment: fixed; /* keeps GIF static while content scrolls */
-    height: 100vh;
-    overflow: hidden;
-    font-family: "Comic Sans MS", "Comic Sans", cursive;
-}
-
-/* ===== CENTERING WRAPPER ===== */
-.page-wrapper {
-    position: fixed;
-    inset: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* ===== FLOATING PAGE ===== */
-.homepage {
-    width: 80%;
-    max-width: 900px;
-    height: 80vh;
-    background-color: #adadad;
-    color: #111;
-    padding: 30px;
-    overflow-y: auto; /* allows scrolling inside */
-    box-shadow: 0 0 40px rgba(255,255,255,0.08);
-    border-radius: 4px;
-}
-
-/* ===== DEMO CONTENT ===== */
-.homepage h1 {
-    margin-bottom: 20px;
-  text-align: center;
-}
-
-.homepage p {
-    margin-bottom: 16px;
-    line-height: 1.6;
-    /* CENTER TEXT */
-    text-align: center;
-
-}
-</style>
 <head>
+    <meta charset="UTF-8">
+    <title>MySpace.com</title>
 
+    <style>
+    /* ===== RESET ===== */
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* ===== BLACK GIF BACKGROUND ===== */
+    body {
+        background-color: black;
+        background-image: url("sparkles.gif");
+        background-repeat: repeat;
+        background-position: center;
+        background-attachment: fixed;
+        height: 100vh;
+        overflow: hidden;
+        font-family: "Comic Sans MS", "Comic Sans", cursive;
+    }
+
+    /* ===== CENTERING WRAPPER ===== */
+    .page-wrapper {
+        position: fixed;
+        inset: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* ===== FLOATING PAGE ===== */
+    .homepage {
+        width: 80%;
+        max-width: 900px;
+        height: 80vh;
+        background-color: #adadad;
+        color: #111;
+        padding: 30px;
+        overflow-y: auto;
+        box-shadow: 0 0 40px rgba(255,255,255,0.08);
+        border-radius: 4px;
+    }
+
+    /* ===== CONTENT ===== */
+    .homepage h1 {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .homepage p {
+        margin-bottom: 16px;
+        line-height: 1.6;
+        text-align: center;
+    }
+    </style>
 </head>
 
 <body>
@@ -72,14 +71,10 @@ body {
             Ava, Araceli, Cyan, and Tania were here >:3c
         </p>
 
-        <!-- FILLER CONTENT FOR SCROLLING -->
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-
-        <!-- DUPLICATE TO ENSURE SCROLL -->
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      
     </div>
 </div>
-</body>
 
+</body>
 </html>
